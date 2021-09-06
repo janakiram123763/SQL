@@ -1,0 +1,6 @@
+which country has max branch
+select count(b.country_code) as no_of_branch,c.country_name from branch as b 
+join country as c on c.country_code=b.country_code group by b.country_code having count(b.country_code) 
+>= (select  count(country_code) from branch group by  (country_code));
+
+
