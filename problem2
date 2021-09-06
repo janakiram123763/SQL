@@ -1,0 +1,2 @@
+category of min producst
+select min(category_code) from product;
