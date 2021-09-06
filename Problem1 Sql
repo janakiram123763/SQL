@@ -1,0 +1,2 @@
+category of max products
+select max(category_code) from product;
