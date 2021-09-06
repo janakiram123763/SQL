@@ -1,0 +1,2 @@
+costliest project
+select product_code, prod_desc, max(price) from product;
