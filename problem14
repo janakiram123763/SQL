@@ -1,0 +1,6 @@
+date of the costliest order
+select od.order_code, od.product_code,max(od.qty_ordered*p.price) as bill, om.order_date from order_detail as od join product as p on od.product_code = p.product_code join order_master as om on om.order_code = od.order_code 
+
+
+select od.order_code, od.product_code,(od.qty_ordered*p.price) as bill, om.order_date from order_detail as od join product as p on od.product_code = p.product_code join order_master as om on om.order_code = od.order_code 
+having bill <= (select (od.qty_ordered*p.price) from order_detail as od join product as p on p.product_code=od.product_code group by  od.qty_ordered*p.price);
