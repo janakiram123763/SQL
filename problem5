@@ -1,0 +1,4 @@
+category of costliest product
+select product_code, prod_desc, max(price), category_desc 
+from product as p 
+join category as c on c.category_code=p.category_code;
