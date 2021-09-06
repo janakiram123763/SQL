@@ -1,0 +1,4 @@
+country with no branch
+ select* from country where country_code not in (select * from  branch);
+ 
+
