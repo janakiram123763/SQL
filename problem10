@@ -1,0 +1,9 @@
+frequently ordered product
+select o.product_code, COUNT(o.Product_code),prod_desc AS MOST_FREQUENT
+from order_detail as o join product as p on p.product_code =o.product_code GROUP BY o.Product_code
+ORDER BY COUNT(o.product_code) DESC limit 1;
+
+
+select o.product_code, COUNT(o.Product_code) as pdt_count,prod_desc AS MOST_FREQUENT
+from order_detail as o join product as p on p.product_code =o.product_code GROUP BY o.Product_code
+having COUNT(o.product_code)  >= (select COUNT(product_code) from order_detail group by product_code  )  ;
