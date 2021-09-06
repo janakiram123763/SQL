@@ -1,0 +1,6 @@
+ products not at all ordered
+SELECT prod_desc,product_code
+FROM product 
+WHERE product_code NOT IN (SELECT product_code 
+FROM order_detail GROUP BY product_code);
+
