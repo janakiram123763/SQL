@@ -1,0 +1,6 @@
+least orderd products (wrong)
+select o.product_code, COUNT(o.Product_code),prod_desc AS MOST_FREQUENT 
+from order_detail as o join product as p on p.product_code =o.product_code 
+GROUP BY o.Product_code 
+ORDER BY COUNT(o.product_code) ;
+
