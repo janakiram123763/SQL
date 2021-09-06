@@ -1,0 +1,9 @@
+order which has max prod
+
+select order_code , count(product_code) as no_of_pdt
+from order_detail 
+group by order_code
+having count(product_code) >= (select count(product_code)
+from order_detail
+group by order_code);
+
