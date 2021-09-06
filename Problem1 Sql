@@ -1,2 +1,12 @@
+select* from country;
+select* from CATEGORY;
+select* from CUSTOMER;
+select* from BRANCH;
+select* from SALESREP;
+select* from PRODUCT;
+select* from ORDER_MASTER;
+select* from ORDER_DETAIL;
+
+
 category of max products
 select max(category_code) from product;
