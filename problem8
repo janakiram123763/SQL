@@ -1,0 +1,5 @@
+category ise display produt with min quantitty
+select min(qty_on_hand) as min_qty , category_desc, prod_desc 
+from product as p 
+join category as c on c.category_code = p.category_code 
+group by category_desc;
