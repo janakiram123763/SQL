@@ -1,0 +1,6 @@
+costliest order
+select order_code, (qty_ordered*p.price) as bill 
+from order_detail as o 
+join product as p on p.product_code = o.product_code having bill
+>=(select order_code, (qty_ordered*p.price) as bill from order_detail as o join product as p on p.product_code = o.product_code);
+
