@@ -1,0 +1,6 @@
+generating a table
+select c.customer_name,om.order_code,om.order_date,(od.qty_ordered *p.price) as bill_amount,od.qty_ordered from customer as c 
+join order_master as om on om.customer_code = c.customer_code 
+join order_detail as od on od.order_code = om.order_code 
+join product as p on p.product_code = od.product_code;
+
