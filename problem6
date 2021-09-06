@@ -1,0 +1,4 @@
+max number of products w.r.t catego
+select category_code,max(qty_on_hand),category_desc 
+from product as p 
+join category as c on c.category_code=p.category_code;
