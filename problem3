@@ -1,0 +1,5 @@
+which caegory has no products
+SELECT category_code,category_desc
+FROM category 
+WHERE category_code NOT IN (SELECT category_code 
+FROM product GROUP BY category_code);
