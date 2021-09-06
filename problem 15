@@ -1,0 +1,6 @@
+which customer made the costliest order
+select c.customer_code, c.customer_name, max(od.qty_ordered *p.price) as bill_amount
+from customer as c 
+join order_master as om on om.customer_code=c.customer_code 
+join order_detail as od on od.order_code =om.order_code 
+join product as p on p.product_code = od.product_code;
